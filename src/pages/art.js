@@ -1,20 +1,20 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const BlogIndex = ({ data, location }) => {
+const ArtPage = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title
+
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title="Gallery and Portfolio" />
+      <h5>Todo: Load images and display a mosaic of Erickka's art</h5>
     </Layout>
   )
 }
-
-export default BlogIndex
-
+export default ArtPage
 export const pageQuery = graphql`
   query {
     site {
